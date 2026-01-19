@@ -1,18 +1,35 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route("/")
 def home():
-    return render_template('home.html', name = 'Ansh')
+    return render_template("home.html")
 
-@app.route("/about")
-def about():
-    return "<h1>About Page Coming Soon!</h1>"
-
-@app.route("/login")
+@app.route("/login", methods=["GET", "POST"])
 def login():
-    return "<h2>Login page coming soon</h2>"
+    if request.method == "POST":
+        email = request.form["email"]
+        password = request.form["password"]
 
-if __name__ == '__main__':
+        print("Login attempt:", email, password)
+
+        return redirect(url_for("home"))
+
+    return render_template("login.html")
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        name = request.form["name"]
+        email = request.form["email"]
+        password = request.form["password"]
+
+        print("Register:", name, email, password)
+
+        return redirect(url_for("login"))
+
+    return render_template("register.html")
+
+if __name__ == "__main__":
     app.run(debug=True)
