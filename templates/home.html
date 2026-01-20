@@ -1,13 +1,43 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="card">
+<!-- <div class="card">
     <div class="card-body">
         <h2 class="card-title">Welcome to Hospital Management System</h2>
         <p class="card-text">
             Manage doctors, patients and appointments efficiently.
             <a href="/login" class="btn btn-primary">Login</a>
+            <a href="/register" class="btn btn-success">Register</a>
         </p>
     </div>
+</div> -->
+<!-- <div class="card text-center mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Welcome to Hospital Management System</h5>
+    <p class="card-text">Manage doctors, patients and appointments efficiently.</p>
+    <a href="/login" class="btn btn-primary">Login</a>
+    <a href="/register" class="btn btn-success">Register</a>
+  </div>
+</div> -->
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="true" href="#">Admin</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Doctors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Patients</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <h2 class="card-title">Welcome to Hospital Management System</h2>
+    <p class="card-text">Manage doctors, patients and appointments efficiently.</p>
+    <a href="/login" class="btn btn-primary">Login</a>
+    <a href="/register" class="btn btn-success">Register</a>
+  </div>
 </div>
 {% endblock %}
