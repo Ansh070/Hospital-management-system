@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-12">
+        <h2 class="fw-bold mb-3"><i class="fa-solid fa-user-doctor me-2 text-primary"></i>Doctor Dashboard</h2>
+        <p class="text-muted">Good Morning, Dr. Smith. You have 5 appointments today.</p>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Left Column: Schedule & Patients -->
+    <div class="col-lg-8">
+        <!-- Today's Stats -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-4">
+                <div class="card bg-primary text-white h-100">
+                    <div class="card-body">
+                        <h6 class="text-uppercase text-white-50 small fw-bold mb-2">Appointments</h6>
+                        <h2 class="mb-0">05</h2>
+                        <small class="text-white-50">Today</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-white h-100">
+                    <div class="card-body">
+                        <h6 class="text-uppercase text-muted small fw-bold mb-2">Total Patients</h6>
+                        <h2 class="mb-0 text-primary">142</h2>
+                        <small class="text-success"><i class="fa-solid fa-arrow-up me-1"></i>+4% this week</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-white h-100">
+                    <div class="card-body">
+                        <h6 class="text-uppercase text-muted small fw-bold mb-2">Surgeries</h6>
+                        <h2 class="mb-0 text-danger">02</h2>
+                        <small class="text-muted">Pending this week</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Today's Schedule -->
+        <div class="card mb-4">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Today's Schedule</h5>
+                <span class="badge bg-primary">Oct 24, 2024</span>
+            </div>
+            <div class="card-body">
+                <div class="timeline">
+                    <div class="d-flex mb-4">
+                        <div class="me-3 text-center" style="min-width: 60px;">
+                            <span class="d-block fw-bold text-dark">09:00</span>
+                            <small class="text-muted">AM</small>
+                        </div>
+                        <div class="flex-grow-1 border-start ps-4 border-primary position-relative">
+                            <div class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle"
+                                style="width: 12px; height: 12px;"></div>
+                            <div class="card bg-light border-0">
+                                <div class="card-body p-3">
+                                    <h6 class="fw-bold mb-1">General Checkup - John Doe</h6>
+                                    <p class="mb-0 text-muted small"><i class="fa-solid fa-notes-medical me-1"></i>
+                                        Routine follow-up for hypertension.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="me-3 text-center" style="min-width: 60px;">
+                            <span class="d-block fw-bold text-dark">10:30</span>
+                            <small class="text-muted">AM</small>
+                        </div>
+                        <div class="flex-grow-1 border-start ps-4 border-2 position-relative">
+                            <div class="position-absolute top-0 start-0 translate-middle bg-secondary rounded-circle"
+                                style="width: 12px; height: 12px;"></div>
+                            <div class="card bg-light border-0">
+                                <div class="card-body p-3">
+                                    <h6 class="fw-bold mb-1">Consultation - Sarah Connor</h6>
+                                    <p class="mb-0 text-muted small"><i class="fa-solid fa-notes-medical me-1"></i> New
+                                        patient consultation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="me-3 text-center" style="min-width: 60px;">
+                            <span class="d-block fw-bold text-dark">02:00</span>
+                            <small class="text-muted">PM</small>
+                        </div>
+                        <div class="flex-grow-1 border-start ps-4 border-2 position-relative">
+                            <div class="position-absolute top-0 start-0 translate-middle bg-secondary rounded-circle"
+                                style="width: 12px; height: 12px;"></div>
+                            <div class="card bg-light border-0">
+                                <div class="card-body p-3">
+                                    <h6 class="fw-bold mb-1">Surgery - Robert Paulson</h6>
+                                    <p class="mb-0 text-muted small"><i class="fa-solid fa-syringe me-1"></i> Minor
+                                        surgical procedure.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Column: Patient Requests & Profile -->
+    <div class="col-lg-4">
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <div class="mb-3">
+                    <span class="bg-primary bg-opacity-10 p-3 rounded-circle text-primary">
+                        <i class="fa-solid fa-user-doctor fa-3x"></i>
+                    </span>
+                </div>
+                <h5 class="fw-bold">Dr. John Smith</h5>
+                <p class="text-muted mb-2">Cardiology Specialist</p>
+                <div class="d-flex justify-content-center gap-2">
+                    <button class="btn btn-sm btn-outline-primary">Edit Profile</button>
+                    <button class="btn btn-sm btn-outline-danger">Logout</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header bg-white">
+                <h5 class="mb-0">Patient Requests</h5>
+            </div>
+            <div class="card-body p-0">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item p-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-0">Emily Blunt</h6>
+                                <small class="text-muted">Requested prescription renewal</small>
+                            </div>
+                            <button class="btn btn-sm btn-light text-primary"><i class="fa-solid fa-check"></i></button>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-0">Jack Ryan</h6>
+                                <small class="text-muted">Lab results review</small>
+                            </div>
+                            <button class="btn btn-sm btn-light text-primary"><i class="fa-solid fa-check"></i></button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="p-3 text-center border-top">
+                    <a href="#" class="text-decoration-none small fw-bold">View All Requests</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

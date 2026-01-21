@@ -6,6 +6,18 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
+@app.route("/admin_dashboard")
+def admin_dashboard():
+    return render_template("admin_dashboard.html")
+
+@app.route("/doctor_dashboard")
+def doctor_dashboard():
+    return render_template("doctor_dashboard.html")
+
+@app.route("/patient_dashboard")
+def patient_dashboard():
+    return render_template("patient_dashboard.html")
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":

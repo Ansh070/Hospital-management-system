@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-12">
+        <h2 class="fw-bold mb-3"><i class="fa-solid fa-user-shield me-2 text-primary"></i>Admin Dashboard</h2>
+        <p class="text-muted">Welcome back, Administrator. Here's an overview of the hospital's performance.</p>
+    </div>
+</div>
+
+<!-- Stats Cards -->
+<div class="row g-4 mb-5">
+    <div class="col-md-3">
+        <div class="card h-100 border-start border-4 border-primary">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <p class="mb-0 text-muted small text-uppercase fw-bold">Total Patients</p>
+                        <h3 class="fw-bold mb-0 mt-1">1,204</h3>
+                    </div>
+                    <div class="bg-primary-soft p-3 rounded-circle text-primary">
+                        <i class="fa-solid fa-users fa-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100 border-start border-4 border-success">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <p class="mb-0 text-muted small text-uppercase fw-bold">Active Doctors</p>
+                        <h3 class="fw-bold mb-0 mt-1">42</h3>
+                    </div>
+                    <div class="bg-success bg-opacity-10 p-3 rounded-circle text-success">
+                        <i class="fa-solid fa-user-doctor fa-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100 border-start border-4 border-warning">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <p class="mb-0 text-muted small text-uppercase fw-bold">Appointments</p>
+                        <h3 class="fw-bold mb-0 mt-1">85</h3>
+                    </div>
+                    <div class="bg-warning bg-opacity-10 p-3 rounded-circle text-warning">
+                        <i class="fa-solid fa-calendar-check fa-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100 border-start border-4 border-danger">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <p class="mb-0 text-muted small text-uppercase fw-bold">Pending Requests</p>
+                        <h3 class="fw-bold mb-0 mt-1">12</h3>
+                    </div>
+                    <div class="bg-danger bg-opacity-10 p-3 rounded-circle text-danger">
+                        <i class="fa-solid fa-bell fa-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Activity & Quick Actions -->
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card h-100">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Recent Appointments</h5>
+                <button class="btn btn-sm btn-outline-primary">View All</button>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="bg-light">
+                            <tr>
+                                <th scope="col" class="ps-4">Patient</th>
+                                <th scope="col">Doctor</th>
+                                <th scope="col">Date & Time</th>
+                                <th scope="col">Status</th>
+                                <th scope="col" class="text-end pe-4">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-light rounded-circle p-2 me-2">
+                                            <i class="fa-solid fa-user text-secondary"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0 small">John Doe</h6>
+                                            <small class="text-muted">ID: #P-1024</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Dr. Sarah Smith</td>
+                                <td>Oct 24, 10:00 AM</td>
+                                <td><span class="badge bg-success bg-opacity-10 text-success">Confirmed</span></td>
+                                <td class="text-end pe-4">
+                                    <button class="btn btn-sm btn-light"><i
+                                            class="fa-solid fa-ellipsis-vertical"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-light rounded-circle p-2 me-2">
+                                            <i class="fa-solid fa-user text-secondary"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0 small">Jane Cooper</h6>
+                                            <small class="text-muted">ID: #P-1025</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Dr. Michael Brown</td>
+                                <td>Oct 24, 11:30 AM</td>
+                                <td><span class="badge bg-warning bg-opacity-10 text-warning">Pending</span></td>
+                                <td class="text-end pe-4">
+                                    <button class="btn btn-sm btn-light"><i
+                                            class="fa-solid fa-ellipsis-vertical"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-light rounded-circle p-2 me-2">
+                                            <i class="fa-solid fa-user text-secondary"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0 small">Robert Fox</h6>
+                                            <small class="text-muted">ID: #P-1026</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Dr. Emily White</td>
+                                <td>Oct 24, 02:00 PM</td>
+                                <td><span class="badge bg-danger bg-opacity-10 text-danger">Cancelled</span></td>
+                                <td class="text-end pe-4">
+                                    <button class="btn btn-sm btn-light"><i
+                                            class="fa-solid fa-ellipsis-vertical"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card mb-4">
+            <div class="card-header bg-white">
+                <h5 class="mb-0">Quick Actions</h5>
+            </div>
+            <div class="card-body">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary"><i class="fa-solid fa-plus me-2"></i>Add New Doctor</button>
+                    <button class="btn btn-outline-secondary"><i class="fa-solid fa-user-plus me-2"></i>Register
+                        Patient</button>
+                    <button class="btn btn-outline-secondary"><i class="fa-solid fa-calendar-plus me-2"></i>Create
+                        Appointment</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header bg-white">
+                <h5 class="mb-0">System Status</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                        <span><i class="fa-solid fa-server me-2 text-muted"></i>Server Uptime</span>
+                        <span class="fw-bold text-success">99.9%</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                        <span><i class="fa-solid fa-database me-2 text-muted"></i>Database Status</span>
+                        <span class="badge bg-success">Connected</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                        <span><i class="fa-solid fa-lock me-2 text-muted"></i>Security Check</span>
+                        <span class="badge bg-info">Passed</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

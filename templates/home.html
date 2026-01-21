@@ -1,43 +1,79 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!-- <div class="card">
-    <div class="card-body">
-        <h2 class="card-title">Welcome to Hospital Management System</h2>
-        <p class="card-text">
-            Manage doctors, patients and appointments efficiently.
-            <a href="/login" class="btn btn-primary">Login</a>
-            <a href="/register" class="btn btn-success">Register</a>
-        </p>
+<!-- Hero Section -->
+<section class="py-5 mb-5 bg-white rounded-3 shadow-sm border mt-3">
+  <div class="row align-items-center g-5 p-5">
+    <div class="col-lg-6">
+      <h1 class="display-4 fw-bold lh-1 mb-3">Your Health, Our <span class="text-primary">Priority</span></h1>
+      <p class="lead text-muted mb-4">Experience world-class healthcare with our advanced hospital management system.
+        Book appointments, view medical records, and connect with top specialists instantly.</p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg px-4 me-md-2">Get Started</a>
+        <a href="{{ url_for('login') }}" class="btn btn-outline-secondary btn-lg px-4">Patient Login</a>
+      </div>
     </div>
-</div> -->
-<!-- <div class="card text-center mb-3" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Welcome to Hospital Management System</h5>
-    <p class="card-text">Manage doctors, patients and appointments efficiently.</p>
-    <a href="/login" class="btn btn-primary">Login</a>
-    <a href="/register" class="btn btn-success">Register</a>
+    <div class="col-lg-6">
+      <!-- Placeholder for a hero image, using a nice icon composition for now -->
+      <div class="text-center text-primary opacity-75">
+        <i class="fa-solid fa-house-medical fa-10x"></i>
+      </div>
+    </div>
   </div>
-</div> -->
-<div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-tabs card-header-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="true" href="#">Admin</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Doctors</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Patients</a>
-      </li>
-    </ul>
+</section>
+
+<!-- Features Section -->
+<section class="mb-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">Why Choose MedCare?</h2>
+    <p class="text-muted">Comprehensive healthcare solutions for everyone.</p>
   </div>
-  <div class="card-body">
-    <h2 class="card-title">Welcome to Hospital Management System</h2>
-    <p class="card-text">Manage doctors, patients and appointments efficiently.</p>
-    <a href="/login" class="btn btn-primary">Login</a>
-    <a href="/register" class="btn btn-success">Register</a>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100 text-center p-4 border-0 shadow-hover">
+        <div class="card-body">
+          <div class="bg-primary bg-opacity-10 p-3 rounded-circle d-inline-block mb-3 text-primary">
+            <i class="fa-solid fa-user-doctor fa-2x"></i>
+          </div>
+          <h5 class="fw-bold">Expert Doctors</h5>
+          <p class="text-muted">Access to over 500+ certified specialists across various departments.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 text-center p-4 border-0 shadow-hover">
+        <div class="card-body">
+          <div class="bg-success bg-opacity-10 p-3 rounded-circle d-inline-block mb-3 text-success">
+            <i class="fa-solid fa-clock fa-2x"></i>
+          </div>
+          <h5 class="fw-bold">24/7 Service</h5>
+          <p class="text-muted">Emergency care and support available round the clock for your safety.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 text-center p-4 border-0 shadow-hover">
+        <div class="card-body">
+          <div class="bg-warning bg-opacity-10 p-3 rounded-circle d-inline-block mb-3 text-warning">
+            <i class="fa-solid fa-mobile-screen fa-2x"></i>
+          </div>
+          <h5 class="fw-bold">Easy Booking</h5>
+          <p class="text-muted">Book appointments online instantly without waiting in long queues.</p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 bg-primary text-white rounded-3 mb-5 text-center p-5 position-relative overflow-hidden">
+  <div class="position-relative z-1">
+    <h2 class="fw-bold mb-3">Ready to transform your healthcare experience?</h2>
+    <p class="lead mb-4">Join thousands of satisfied patients who trust MedCare.</p>
+    <a href="{{ url_for('register') }}" class="btn btn-light btn-lg text-primary px-5 fw-bold">Join Now</a>
+  </div>
+  <!-- Background Icon decoration -->
+  <i class="fa-solid fa-heart-pulse position-absolute text-white opacity-25"
+    style="font-size: 20rem; top: -50px; right: -50px; transform: rotate(-15deg);"></i>
+</section>
 {% endblock %}
