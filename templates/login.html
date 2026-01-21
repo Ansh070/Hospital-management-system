@@ -1,30 +1,41 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- Center the login card vertically and horizontally -->
 <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
     <div class="col-md-5 col-lg-4">
+        <!-- Login Card -->
         <div class="card shadow-lg border-0 rounded-lg mt-5">
             <div class="card-body p-5">
+                <!-- Header Icon and Text -->
                 <div class="text-center mb-4">
                     <i class="fa-solid fa-user-circle fa-3x text-primary mb-3"></i>
                     <h3 class="font-weight-light">Welcome Back</h3>
                     <p class="text-muted">Sign in to continue to MedCare</p>
                 </div>
+
+                <!-- Login Form -->
+                <!-- 'method="POST"' sends the data securely to the server -->
                 <form method="POST">
+                    <!-- Email Input with Floating Label -->
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
                             required>
                         <label for="email">Email address</label>
                     </div>
+                    <!-- Password Input -->
                     <div class="form-floating mb-3">
                         <input type="password" class="form-control" id="password" name="password" placeholder="Password"
                             required>
                         <label for="password">Password</label>
                     </div>
+                    <!-- Submit Button -->
                     <div class="d-grid">
                         <button class="btn btn-primary btn-lg" type="submit">Sign In</button>
                     </div>
                 </form>
+
+                <!-- Links for Forgot Password and Registration -->
                 <div class="text-center mt-3">
                     <a class="small" href="#">Forgot Password?</a>
                 </div>
@@ -34,7 +45,7 @@
                             Account</a></p>
                 </div>
 
-                <!-- Development Shortcut Links -->
+                <!-- Development Shortcut Links (Just for easier testing during development) -->
                 <div class="mt-4 p-3 bg-light rounded text-center">
                     <p class="small text-muted fw-bold mb-2">Dev Shortcuts (For Testing)</p>
                     <div class="d-flex justify-content-center gap-2">

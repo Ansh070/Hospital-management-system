@@ -1,20 +1,36 @@
+/* =========================================
+   Global Font Import
+   ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* =========================================
+   CSS Variables (Custom Properties)
+   ========================================= */
 :root {
+    /* Brand Colors */
     --primary-color: #2563eb;
     --secondary-color: #3b82f6;
     --accent-color: #10b981;
+
+    /* Background Colors */
     --dark-bg: #0f172a;
     --light-bg: #f8fafc;
-    --text-color: #334155;
-    --heading-color: #1e293b;
     --card-bg: #ffffff;
     --navbar-bg: #ffffff;
+
+    /* Text Colors */
+    --text-color: #334155;
+    --heading-color: #1e293b;
+
+    /* Shadows for depth */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
+/* =========================================
+   Global Reset & Typography
+   ========================================= */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--light-bg);
@@ -22,12 +38,19 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--heading-color);
     font-weight: 600;
 }
 
-/* Navbar Customization */
+/* =========================================
+   Navbar Customization
+   ========================================= */
 .navbar {
     background-color: var(--navbar-bg) !important;
     box-shadow: var(--shadow-sm);
@@ -53,6 +76,9 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color) !important;
 }
 
+/* =========================================
+   Buttons
+   ========================================= */
 .btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -69,7 +95,9 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-md);
 }
 
-/* Cards */
+/* =========================================
+   Cards (Used for Dashboard Widgets)
+   ========================================= */
 .card {
     border: none;
     background-color: var(--card-bg);
@@ -94,7 +122,9 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.5rem;
 }
 
-/* Forms */
+/* =========================================
+   Form Elements
+   ========================================= */
 .form-control {
     border-radius: 0.5rem;
     padding: 0.75rem 1rem;
@@ -106,11 +136,13 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
 }
 
-.form-floating > label {
+.form-floating>label {
     padding-left: 1rem;
 }
 
-/* Footer */
+/* =========================================
+   Footer
+   ========================================= */
 footer {
     background-color: #ffffff;
     padding: 2rem 0;
@@ -119,7 +151,9 @@ footer {
     color: #64748b;
 }
 
-/* Utils */
+/* =========================================
+   Utility Classes
+   ========================================= */
 .text-primary-custom {
     color: var(--primary-color);
 }

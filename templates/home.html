@@ -1,20 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!-- Hero Section -->
+<!-- Hero Section: The main banner at the top of the page -->
+<!-- 'py-5', 'mb-5', 'bg-white', 'shadow-sm' are Bootstrap classes for spacing, background color, and shadows -->
 <section class="py-5 mb-5 bg-white rounded-3 shadow-sm border mt-3">
   <div class="row align-items-center g-5 p-5">
+    <!-- Left column for text -->
     <div class="col-lg-6">
       <h1 class="display-4 fw-bold lh-1 mb-3">Your Health, Our <span class="text-primary">Priority</span></h1>
       <p class="lead text-muted mb-4">Experience world-class healthcare with our advanced hospital management system.
         Book appointments, view medical records, and connect with top specialists instantly.</p>
+      <!-- Buttons for Call to Action -->
       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <!-- url_for('register') dynamically generates the URL for the register route -->
         <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg px-4 me-md-2">Get Started</a>
         <a href="{{ url_for('login') }}" class="btn btn-outline-secondary btn-lg px-4">Patient Login</a>
       </div>
     </div>
+    <!-- Right column for image/icon -->
     <div class="col-lg-6">
-      <!-- Placeholder for a hero image, using a nice icon composition for now -->
+      <!-- Using a large Font Awesome icon as a placeholder graphic -->
       <div class="text-center text-primary opacity-75">
         <i class="fa-solid fa-house-medical fa-10x"></i>
       </div>
@@ -22,13 +27,15 @@
   </div>
 </section>
 
-<!-- Features Section -->
+<!-- Features Section: Highlights key benefits -->
 <section class="mb-5">
   <div class="text-center mb-5">
     <h2 class="fw-bold">Why Choose MedCare?</h2>
     <p class="text-muted">Comprehensive healthcare solutions for everyone.</p>
   </div>
+  <!-- Grid layout for feature cards -->
   <div class="row g-4">
+    <!-- Feature 1 -->
     <div class="col-md-4">
       <div class="card h-100 text-center p-4 border-0 shadow-hover">
         <div class="card-body">
@@ -40,6 +47,7 @@
         </div>
       </div>
     </div>
+    <!-- Feature 2 -->
     <div class="col-md-4">
       <div class="card h-100 text-center p-4 border-0 shadow-hover">
         <div class="card-body">
@@ -51,6 +59,7 @@
         </div>
       </div>
     </div>
+    <!-- Feature 3 -->
     <div class="col-md-4">
       <div class="card h-100 text-center p-4 border-0 shadow-hover">
         <div class="card-body">
@@ -65,14 +74,14 @@
   </div>
 </section>
 
-<!-- Call to Action -->
+<!-- Call to Action Section: Final prompt to sign up -->
 <section class="py-5 bg-primary text-white rounded-3 mb-5 text-center p-5 position-relative overflow-hidden">
   <div class="position-relative z-1">
     <h2 class="fw-bold mb-3">Ready to transform your healthcare experience?</h2>
     <p class="lead mb-4">Join thousands of satisfied patients who trust MedCare.</p>
     <a href="{{ url_for('register') }}" class="btn btn-light btn-lg text-primary px-5 fw-bold">Join Now</a>
   </div>
-  <!-- Background Icon decoration -->
+  <!-- Decorative background icon -->
   <i class="fa-solid fa-heart-pulse position-absolute text-white opacity-25"
     style="font-size: 20rem; top: -50px; right: -50px; transform: rotate(-15deg);"></i>
 </section>

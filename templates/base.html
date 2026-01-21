@@ -1,69 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MedCare - Hospital Management System</title>
+  <!-- Meta tags for proper character encoding and responsive viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedCare - Hospital Management System</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Bringing in the 'Poppins' font family for a modern look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome: Library for using icons (like the heart, user, etc.) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- Bootstrap CSS: The main CSS framework for layout and components -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS: Our own styles to override or extend Bootstrap -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body class="d-flex flex-column min-vh-100">
+  <!-- 'd-flex column min-vh-100' makes sure the footer sticks to the bottom even on short pages -->
 
-<nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="/">
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <!-- Brand Name/Logo -->
+      <a class="navbar-brand" href="/">
         <i class="fa-solid fa-heart-pulse text-primary-custom"></i> MedCare
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/"><i class="fa-solid fa-house me-1"></i> Home</a>
-        </li>
-        <!-- Will add conditional logic for auth links later -->
-        <li class="nav-item">
-          <a class="nav-link" href="/login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link btn btn-primary text-white ms-2 px-4 shadow-sm" href="/register">Register</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+      </a>
 
-<div class="flex-grow-1"> <!-- Content Wrapper for sticky footer -->
+      <!-- Mobile Menu Toggle Button (Hamburger menu) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto"> <!-- ms-auto pushes items to the right -->
+          <li class="nav-item">
+            <a class="nav-link" href="/"><i class="fa-solid fa-house me-1"></i> Home</a>
+          </li>
+          <!-- Authentication Links -->
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-primary text-white ms-2 px-4 shadow-sm" href="/register">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <!-- 'flex-grow-1' makes this div fill the available space effectively -->
+  <div class="flex-grow-1">
+    <!-- Jinja2 Block: Child templates (like home.html) will inject their content here -->
     {% block content %}
     {% endblock %}
-</div>
+  </div>
 
-<footer class="text-center">
+  <!-- Footer Section -->
+  <footer class="text-center">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <p class="mb-0">&copy; 2024 MedCare Hospital Management System. All rights reserved.</p>
-                <small>Professional Healthcare Solutions</small>
-            </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="mb-0">&copy; 2024 MedCare Hospital Management System. All rights reserved.</p>
+          <small>Professional Healthcare Solutions</small>
         </div>
+      </div>
     </div>
-</footer>
+  </footer>
 
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS: Required to make things like the mobile menu and dropdowns work -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

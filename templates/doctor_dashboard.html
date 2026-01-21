@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- Welcome Header -->
 <div class="row mb-4">
     <div class="col-md-12">
         <h2 class="fw-bold mb-3"><i class="fa-solid fa-user-doctor me-2 text-primary"></i>Doctor Dashboard</h2>
@@ -11,7 +12,7 @@
 <div class="row">
     <!-- Left Column: Schedule & Patients -->
     <div class="col-lg-8">
-        <!-- Today's Stats -->
+        <!-- Today's Stats Cards -->
         <div class="row g-4 mb-4">
             <div class="col-md-4">
                 <div class="card bg-primary text-white h-100">
@@ -42,7 +43,7 @@
             </div>
         </div>
 
-        <!-- Today's Schedule -->
+        <!-- Today's Schedule Timeline -->
         <div class="card mb-4">
             <div class="card-header bg-white d-flex justify-content-between align-items-center">
                 <h5 class="mb-0">Today's Schedule</h5>
@@ -50,12 +51,14 @@
             </div>
             <div class="card-body">
                 <div class="timeline">
+                    <!-- Timeline Item 1 -->
                     <div class="d-flex mb-4">
                         <div class="me-3 text-center" style="min-width: 60px;">
                             <span class="d-block fw-bold text-dark">09:00</span>
                             <small class="text-muted">AM</small>
                         </div>
                         <div class="flex-grow-1 border-start ps-4 border-primary position-relative">
+                            <!-- Timeline Dot -->
                             <div class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle"
                                 style="width: 12px; height: 12px;"></div>
                             <div class="card bg-light border-0">
@@ -67,6 +70,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Timeline Item 2 -->
                     <div class="d-flex mb-4">
                         <div class="me-3 text-center" style="min-width: 60px;">
                             <span class="d-block fw-bold text-dark">10:30</span>
@@ -84,6 +88,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Timeline Item 3 -->
                     <div class="d-flex mb-4">
                         <div class="me-3 text-center" style="min-width: 60px;">
                             <span class="d-block fw-bold text-dark">02:00</span>
@@ -106,8 +111,9 @@
         </div>
     </div>
 
-    <!-- Right Column: Patient Requests & Profile -->
+    <!-- Right Column: Doctor Profile & Requests -->
     <div class="col-lg-4">
+        <!-- Profile Card -->
         <div class="card mb-4">
             <div class="card-body text-center">
                 <div class="mb-3">
@@ -124,6 +130,7 @@
             </div>
         </div>
 
+        <!-- Requests List -->
         <div class="card">
             <div class="card-header bg-white">
                 <h5 class="mb-0">Patient Requests</h5>

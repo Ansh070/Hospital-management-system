@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- Welcome Header and Action Button -->
 <div class="row mb-4">
     <div class="col-md-8">
         <h2 class="fw-bold mb-1"><i class="fa-solid fa-hospital-user me-2 text-primary"></i>My Health Dashboard</h2>
@@ -12,25 +13,30 @@
 </div>
 
 <div class="row g-4">
-    <!-- Health Vitals Summary -->
+    <!-- Health Vitals Summary Card -->
+    <!-- Displays key metrics like Heart Rate, BP, etc. -->
     <div class="col-md-12">
         <div class="card border-0 shadow-sm bg-primary text-white">
             <div class="card-body p-4">
                 <h5 class="card-title mb-4 fw-bold">Recent Vitals <span
                         class="badge bg-white text-primary ms-2 small">Oct 20</span></h5>
                 <div class="row text-center">
+                    <!-- Heart Rate -->
                     <div class="col-md-3 mb-3 mb-md-0 border-end border-white border-opacity-25">
                         <small class="text-white-50 text-uppercase fw-bold">Heart Rate</small>
                         <h3 class="fw-bold mb-0 mt-1">72 <span class="fs-6 fw-normal">bpm</span></h3>
                     </div>
+                    <!-- Blood Pressure -->
                     <div class="col-md-3 mb-3 mb-md-0 border-end border-white border-opacity-25">
                         <small class="text-white-50 text-uppercase fw-bold">Blood Pressure</small>
                         <h3 class="fw-bold mb-0 mt-1">120/80 <span class="fs-6 fw-normal">mmHg</span></h3>
                     </div>
+                    <!-- Glucose Level -->
                     <div class="col-md-3 mb-3 mb-md-0 border-end border-white border-opacity-25">
                         <small class="text-white-50 text-uppercase fw-bold">Glucose</small>
                         <h3 class="fw-bold mb-0 mt-1">95 <span class="fs-6 fw-normal">mg/dL</span></h3>
                     </div>
+                    <!-- Weight -->
                     <div class="col-md-3">
                         <small class="text-white-50 text-uppercase fw-bold">Weight</small>
                         <h3 class="fw-bold mb-0 mt-1">70 <span class="fs-6 fw-normal">kg</span></h3>
@@ -40,27 +46,32 @@
         </div>
     </div>
 
-    <!-- Upcoming Appointments -->
+    <!-- Upcoming Appointments List -->
     <div class="col-lg-8">
         <div class="card h-100">
             <div class="card-header bg-white">
                 <h5 class="mb-0">Upcoming Appointments</h5>
             </div>
             <div class="card-body">
+                <!-- Appointment Item -->
                 <div class="d-flex align-items-center p-3 border rounded mb-3 bg-light">
+                    <!-- Date Box -->
                     <div class="bg-white p-3 rounded text-center shadow-sm me-3" style="min-width: 80px;">
                         <span class="d-block text-danger fw-bold text-uppercase small">Oct</span>
                         <h3 class="mb-0 fw-bold">25</h3>
                     </div>
+                    <!-- Details -->
                     <div class="flex-grow-1">
                         <h6 class="fw-bold mb-1">Dental Checkup</h6>
                         <p class="mb-1 text-muted small"><i class="fa-solid fa-user-doctor me-1"></i> with Dr. Smile</p>
                         <p class="mb-0 text-muted small"><i class="fa-solid fa-clock me-1"></i> 10:00 AM - 11:00 AM</p>
                     </div>
+                    <!-- Status Badge -->
                     <div>
                         <span class="badge bg-primary">Confirmed</span>
                     </div>
                 </div>
+                <!-- Notifications/Alerts -->
                 <div class="alert alert-info border-0 d-flex align-items-center" role="alert">
                     <i class="fa-solid fa-circle-info me-2"></i>
                     <div>
@@ -71,12 +82,13 @@
         </div>
     </div>
 
-    <!-- Quick Links & History -->
+    <!-- Medical History Side Widget -->
     <div class="col-lg-4">
         <div class="card h-100">
             <div class="card-header bg-white">
                 <h5 class="mb-0">Medical History</h5>
             </div>
+            <!-- List Group for History Items -->
             <div class="list-group list-group-flush">
                 <a href="#"
                     class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- Dashboard Header -->
 <div class="row mb-4">
     <div class="col-md-12">
         <h2 class="fw-bold mb-3"><i class="fa-solid fa-user-shield me-2 text-primary"></i>Admin Dashboard</h2>
@@ -8,9 +9,12 @@
     </div>
 </div>
 
-<!-- Stats Cards -->
+<!-- Stats Cards Section -->
+<!-- 'row g-4' creates a grid with gaps between columns -->
 <div class="row g-4 mb-5">
+    <!-- Card 1: Total Patients -->
     <div class="col-md-3">
+        <!-- 'h-100' makes the card fill the full height of the column -->
         <div class="card h-100 border-start border-4 border-primary">
             <div class="card-body">
                 <div class="d-flex align-items-center justify-content-between">
@@ -18,6 +22,7 @@
                         <p class="mb-0 text-muted small text-uppercase fw-bold">Total Patients</p>
                         <h3 class="fw-bold mb-0 mt-1">1,204</h3>
                     </div>
+                    <!-- Icon container -->
                     <div class="bg-primary-soft p-3 rounded-circle text-primary">
                         <i class="fa-solid fa-users fa-lg"></i>
                     </div>
@@ -25,6 +30,7 @@
             </div>
         </div>
     </div>
+    <!-- Card 2: Active Doctors -->
     <div class="col-md-3">
         <div class="card h-100 border-start border-4 border-success">
             <div class="card-body">
@@ -40,6 +46,7 @@
             </div>
         </div>
     </div>
+    <!-- Card 3: Appointments -->
     <div class="col-md-3">
         <div class="card h-100 border-start border-4 border-warning">
             <div class="card-body">
@@ -55,6 +62,7 @@
             </div>
         </div>
     </div>
+    <!-- Card 4: Pending Requests -->
     <div class="col-md-3">
         <div class="card h-100 border-start border-4 border-danger">
             <div class="card-body">
@@ -72,8 +80,9 @@
     </div>
 </div>
 
-<!-- Recent Activity & Quick Actions -->
+<!-- Main Content Area: Recent Activity & Sidebar -->
 <div class="row">
+    <!-- Left Column: Recent Appointments Table -->
     <div class="col-lg-8">
         <div class="card h-100">
             <div class="card-header bg-white d-flex justify-content-between align-items-center">
@@ -93,6 +102,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- Table Row 1 -->
                             <tr>
                                 <td class="ps-4">
                                     <div class="d-flex align-items-center">
@@ -113,6 +123,7 @@
                                             class="fa-solid fa-ellipsis-vertical"></i></button>
                                 </td>
                             </tr>
+                            <!-- Table Row 2 -->
                             <tr>
                                 <td class="ps-4">
                                     <div class="d-flex align-items-center">
@@ -133,6 +144,7 @@
                                             class="fa-solid fa-ellipsis-vertical"></i></button>
                                 </td>
                             </tr>
+                            <!-- Table Row 3 -->
                             <tr>
                                 <td class="ps-4">
                                     <div class="d-flex align-items-center">
@@ -159,7 +171,10 @@
             </div>
         </div>
     </div>
+
+    <!-- Right Column: Sidebar Widgets -->
     <div class="col-lg-4">
+        <!-- Quick Actions Widget -->
         <div class="card mb-4">
             <div class="card-header bg-white">
                 <h5 class="mb-0">Quick Actions</h5>
@@ -174,6 +189,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- System Status Widget -->
         <div class="card">
             <div class="card-header bg-white">
                 <h5 class="mb-0">System Status</h5>
